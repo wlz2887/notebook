@@ -6,3 +6,9 @@ find .
      -type d #表示类型是directory
      | xargs rm -r #获取参数并删除
 ```
+
+删除空间大于or小于多少字节的文件
+==============================
+```bash
+find . -name "*" -type f -size -10000c | xargs -n 1 rm -f # -10000c表示小于10000字节
+```
